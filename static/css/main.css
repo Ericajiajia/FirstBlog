@@ -1,0 +1,85 @@
+body{
+    background-color:#e7feff;
+    font-size:100%;
+    padding:0;
+    margin:0;
+}
+.personal{
+    background-color:#f6608a;
+    width:100%;
+    height:600px;
+}
+.menu{
+    position:fixed;
+    left:20px;
+    top:40px;
+    border:1px solid #fff;
+    width:49px;
+    height:45px;
+    border-radius:4px;
+    cursor:pointer;
+}
+.login{
+    display:inline-block;
+    position:absolute;
+    right:50px;
+    top:40px;
+    border:1px solid #000;
+    width:100px;
+    height:30px;
+    line-height:30px;
+    text-align:center;
+    font-size:1.1em;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.Title{
+    position:absolute;
+    left:30%;
+    top:180px;
+    font-size:3em;
+    font-weight:bolder;
+    font-family:'Candal', sans-serif;
+}
+.shareCombine{
+    position:fixed;
+    width:50px;
+    right:40px;
+    bottom:40px;
+    margin:0;
+    padding:0;
+}
+.shareBlock1,.shareBlock2,.shareBlock3{
+    background-color:#fff;
+    margin-top:3px;
+    height:50px;
+    width:100%;
+    border:1px solid #fff;
+}
+.introduce{
+    height:600px;
+    width:100%;
+}
+.photos{
+    text-align:center;
+    position:relative;
+    height:700px;
+    width:100%;
+    background-color:#475589;
+}
+.top,.bottom{
+    display:inline-block;
+    position:relative;
+    margin-top:50px;
+    margin-left:10%;
+    height:250px;
+    width:20%;
+    border:1px solid #fff;
+}
+.details{
+    position:absolute;
+    background-color:#fff;
+    bottom:0;
+    width:99.9%;
+    height:80px;
+    border:1px solid #fff;
+}

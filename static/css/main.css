@@ -25,17 +25,32 @@ body, html {
 .share-combine {
     position: fixed;
     z-index: 100;
-    width: 50px;
+    width: 30px;
     height: auto;
     right: 40px;
     bottom: 40px;
 }
 .share-block1,.share-block2,.share-block3 {
-    background-color: #fff;
     margin-top: 2px;
-    height: 50px;
+    height: 30px;
     width: 100%;
 }
+.share-block1 {
+    background-color: rgb(203, 32, 39);
+    background-image: url(../pic/wechat.png);
+    background-size: 100% 100%;
+}
+.share-block2 {
+    background-color: rgb(220, 78, 65);
+    background-image: url(../pic/GitHub.png); 
+    background-size: 100% 100%;
+}
+.share-block3 {
+    background-color: rgb(255, 101, 80);
+    background-image: url(../pic/QQ.png);
+    background-size: 100% 100%;
+}
+
 
 /*首页*/
 .personal-page {
@@ -76,15 +91,61 @@ body, html {
 
 /*第三面，相片页*/
 .photos-page {
-    text-align: center;
     position: relative;
     height: 700px;
     width: 100%;
     background-color: #475589;
+    text-align: center;
 }
 .top-photos {
-    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
     height: 40%;
-    border: 1px soloid #fff;
+}
+.top-photos .photo {
+    display: inline-block;
+    width: 240px;
+    height: 100%;
+    border: 1px solid #fff;
+}
+.bottom-photos {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 40%;
+}
+.bottom-photos .photo {
+    display: inline-block;
+    width: 240px;
+    height: 100%;
+    border: 1px solid #fff;
+}
+.float-top {
+    position: relative;
+    top: 0;
+    width: 240px;
+    height: 30px;
+    background-color: #fff;
+    opacity: 0.25;
+}
+.float-bottom {
+    position: relative;
+    top: 190px;
+    width: 240px;
+    height: 60px;
+    background-color: #fff;
+    opacity: 0.35;
 }
 
+
+/*文章分享页*/
+.articles-page {
+    background-color: #ffdab9;
+    width: 100%;
+    height: 700px;
+}

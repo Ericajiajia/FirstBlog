@@ -1,5 +1,4 @@
 body, html {
-    background-color: #e7feff;
     padding: 0;
     margin: 0;
 }
@@ -8,17 +7,19 @@ body, html {
 .menu {
     position: fixed;
     z-index: 102;
-    left: 20px;
-    top: 40px;
+    left: 15px;
+    top: 30px;
     border: 1px solid #fff;
-    width: 49px;
-    height: 45px;
+    width: 35px;
+    height: 30px;
+    text-align: center;
     border-radius: 4px;
     cursor: pointer;
 }
 .menu img {
-    margin-top: 5px;
-    margin-left: 7px;
+    width: 90%;
+    height: 90%;
+    margin-top: 1px;
 }
 
 /* 分享功能 */
@@ -85,6 +86,7 @@ body, html {
 
 /*第二面，简介页*/
 .introduce-page {
+    background-color: #e7feff;
     height: 700px;
     width: 100%;
 }
@@ -97,7 +99,7 @@ body, html {
     background-color: #475589;
     text-align: center;
 }
-.top-photos {
+.top-photos,.bottom-photos {
     margin-top: 30px;
     margin-bottom: 30px;
     display: inline-flex;
@@ -105,47 +107,141 @@ body, html {
     width: 80%;
     height: 40%;
 }
-.top-photos .photo {
+.top-photos .photo,.bottom-photos .photo {
     display: inline-block;
     width: 240px;
     height: 100%;
-    border: 1px solid #fff;
+    border-radius: 10px;
+    transition: all 10s ease;
 }
-.bottom-photos {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: inline-flex;
-    justify-content: space-between;
-    width: 80%;
-    height: 40%;
+.top-photos .photo:nth-child(1) {
+    background: url(../pic/1.jpg);
+    background-size: 100% 100%;
 }
-.bottom-photos .photo {
-    display: inline-block;
-    width: 240px;
-    height: 100%;
-    border: 1px solid #fff;
+.top-photos .photo:nth-child(2) {
+    background: url(../pic/2.jpg);
+    background-size: 100% 100%;
 }
-.float-top {
+.top-photos .photo:nth-child(3) {
+    background: url(../pic/3.jpg);
+    background-size: 100% 100%;
+}
+.bottom-photos .photo:nth-child(1) {
+    background: url(../pic/4.jpg);
+    background-size: 100% 100%;
+}
+.bottom-photos .photo:nth-child(2) {
+    background: url(../pic/5.jpg);
+    background-size: 100% 100%;
+}
+.bottom-photos .photo:nth-child(3) {
+    background: url(../pic/6.jpg);
+    background-size: 100% 100%;
+}
+.float-top,.float-bottom {
+    display: none;
+}
+.photo:hover .float-top {
+    display: block;
     position: relative;
     top: 0;
     width: 240px;
     height: 30px;
-    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #000;
     opacity: 0.25;
 }
-.float-bottom {
+.photo:hover .float-bottom {
+    display: block;
     position: relative;
     top: 190px;
     width: 240px;
     height: 60px;
-    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #000;
     opacity: 0.35;
 }
 
 
 /*文章分享页*/
+
 .articles-page {
     background-color: #ffdab9;
     width: 100%;
     height: 700px;
+}
+.articles-container {
+    list-style-type: none;
+    position: relative;
+    top: 5%;
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.articles-top,.articles-bottom {
+    width: 100%;
+    height: 45%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.article {
+    width: 40%;
+}
+.article-bg1,.article-bg2,.article-bg3,.article-bg4 {
+    width: 100%;
+    height: 80%;
+}
+.article-bg1 img:nth-child(1),.article-bg2 img:nth-child(1),.article-bg3 img:nth-child(1),.article-bg4 img:nth-child(1) {
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    transition: all 2s ease;
+}
+.article-bg1:hover > img,.article-bg2:hover > img,.article-bg3:hover > img,.article-bg4:hover > img {
+    display: none;
+}.articles-entry {
+    display: none;
+}
+.article-bg1:hover .articles-entry,.article-bg2:hover .articles-entry,.article-bg3:hover .articles-entry,.article-bg4:hover .articles-entry {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: #fff;
+    opacity: 0.8;
+}
+.articles-entry img {
+    width: auto;
+    height: 100%;
+    border-radius: 15px;
+    position: relative;
+    top: -50px;
+    left: 65%;
+}
+.button1,.button2 {
+    width: 66px;
+    height: 25px;
+    border-radius: 10px;
+    background: lightskyblue;
+    position: relative;
+    top: 90px;
+    left: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.button2 {
+    top: 120px;
+}
+.articles-introduce {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
 }

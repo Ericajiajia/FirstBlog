@@ -9,28 +9,59 @@
 
 <!-- 菜单功能，缩放 -->
 <div class="menu">
-    <img src="static/pic/1.png" alt="menu">
+    <ul class="menu-guide-bar">
+        <li class="menu-user">
+            <span></span>
+            <a>Jia Hao</a>
+        </li>
+        <li class="menu-photos">
+            <a>PHOTOS</a>
+        </li>
+        <li class="menu-articles">
+            <a>ARTICLES</a>
+        </li>
+        <li class="menu-more">
+            <a>MORE</a>
+        </li>
+        <li class="menu-search">
+            <div class="search-icon">
+                <i></i>
+            </div>
+            <form>
+                <input type="text" name="searchbox" placeholder="Search For What?">
+            </form>
+        </li>
+    </ul>
 </div>
+
 
 
 <!-- 分享功能，微信二维码之类 -->
 <div class="share-combine">
-    <div class="share-block1"></div>
-    <div class="share-block2"></div>
-    <div class="share-block3"></div>
+    <div class="share-wechat"></div>
+    <div class="share-qq"></div>
+    <div class="share-github"></div>
+    <div class="share-twitter"></div>
+    <div class="share-facebook"></div>
 </div>
 
 <!-- 第一页 -->
 <div class="personal-page">
-    <div class="login">LOGIN ></div>
-    <div class="title">WELCOME TO XXX's Blog</div>
+    <div class="user-head">
+        <div class="head-basic panda"></div>
+    </div> <!-- 头像 -->
+    <div class="user-information">
+        <div class="user-name">
+            <p>Jia Hao</p>
+        </div>      <!-- 用户名 -->
+        <div class="user-signal">
+            <p>始于平凡，臻于完善</p>
+        </div>       <!-- 签名 -->
+    </div>
 </div>
 
-<!-- 第二面 ，简介-->
-<div class="introduce-page">
-</div>
 
-<!-- 第三面 ，相片一类-->
+<!-- 第二面 ，相片一类-->
 <div class="photos-page">
     <div class="top-photos">
         <div class="photo">
@@ -87,7 +118,7 @@
 </div>
 
 
-<!-- 第四面，文章分享 -->
+<!-- 第三面，文章分享 -->
 <div class="articles-page">
     <ul class="articles-container">
         <ul class="articles-top">
@@ -140,16 +171,35 @@
         </ul>
     </ul>
 </div>
-<style>
-
-</style>
 
 
-<!-- 尾面，有留言功能，（Markdown文本编辑）有github，新浪微博之类的链接 -->
+<!-- 尾面，有链接 -->
 <div class="end-page">
+    <div class="end-page-container">
+        <div class="end-page-left">
+            <h2>Links To Blogs</h2>
+            <hr style="border: 0;border-top: 1px dashed #fff;width: 70%;">
+            <a href="http://sherhoooo.cn:9010">SherHoooo</a>
+            <a href="http://yulstudio.cn">Yul</a>
+            <a href="">More...</a>
+        </div>
+        <div class="end-page-middle">
+            <h2>Links To Websites</h2>
+            <hr style="border: 0;border-top: 1px dashed #fff;width: 76%;">
+            <a href="https://zh.icons8.com/">花瓣网</a>
+            <a href="https://huaban.com">Icons8</a>
+            <a href="http://www.w3school.com.cn">W3School</a>
+        </div>
+        <div class="end-page-right">
+            <h2>Thanks For Your Visiting</h2>
+            <hr style="border: 0;border-top: 1px dashed #fff;">
+            <a>Here is our blog. I think it's spacial to us and significant~ I hope wo will love each orther forever!</a>
+        </div>
+    </div>
+    <div class="end-page-bottom">
+        <h5>© 2017 EricaJiajia. All rights reserved</h5>
+    </div>
 </div>
-
-
 
 </body>
 </html>

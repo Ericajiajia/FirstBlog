@@ -5,53 +5,79 @@
     <title>FirstBlog</title>
     <link rel="stylesheet" href="static/css/main.css">
 </head>
-<style>
-html,body {
-  width: 100%;
-  height: 100%;
-  min-width: 1000px;
-}
-body {
-  display: flex;
-  justify-content: space-between;
-}
-.article-guide {
-  width: 30%;
-  height: 100%;
-}
-.article-sorts {
-  height: 100%;
-}
-</style>
 <body>
-<div class="article-guide">
-  <ul class="articla-guide-menu">
-    <ul class="guide1">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <ul class="guide2">
-      <li></li>
-      <li></li>
-    </ul>
-  </ul>
-</div>
-<div class="article-sorts">
-  <ul class="article-sorts-show">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+
+<div class="float-bar">
+  <div class="float-back-index"><p>Blog</p></div>
+  <div class="float-user">
+    <div></div>
+  </div>
+  <div class="float-back-camera"><p>Photos</p></div>
 </div>
 
+
+
+<style>
+.guide-bar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 300px;
+  height: 100%;
+  border: 1px solid #000;
+}
+.guide-bar li {
+  list-style-type: none;
+}
+.guide-summary {
+  margin: 0;
+  padding: 0;
+}
+.guide-summary hr {
+  width: 80%;
+  border: 0;
+  border-top: 1px solid grey;
+}
+.guide-summary ul > label {
+    display: inline-block;
+    background: url(static/pic/button-category.svg);
+    width: 30px;
+    height: 15px;
+    background-size: 100% 100%;
+}
+.guide-summary > p {  font-size: 26px;
+  font-weight: bolder;
+  color: #43515c;
+}
+.guide-summary ul > p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #43515c;
+}
+.guide-summary ul li > p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+</style>
+<div class="guide-bar">
+  <ul class="guide-summary"><p>文章分类</p>
+    <ul><label for="label1"></label><p id="label1">前端攻城狮必备</p>
+      <li><p>HTML5小技巧</p></li>
+      <li><p>CSS布局样式</p></li>
+      <li><p>Javascript学习攻略</p></li>
+    </ul>
+    <hr>
+    <ul><label for="label2"></label><p id="label2">算法学习</p>
+      <li><p>经验总结</p></li>
+      <li><p>热门网站</p></li>
+    </ul>
+    <hr>
+    <ul><label for="label3"></label><p id="label3">随笔小记</p></ul>
+  </ul>
+</div>
 
 </body>
 </html>

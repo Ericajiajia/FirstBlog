@@ -1,0 +1,56 @@
+.guide-bar {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 300px;
+  height: 100%;
+  border: 1px solid #000;
+}
+.guide-bar li {
+  list-style-type: none;
+}
+.guide-summary {
+  margin: 0;
+  padding: 0;
+}
+.guide-summary hr {
+  width: 80%;
+  border: 0;
+  border-top: 1px solid grey;
+}
+.guide-label0, .guide-label1 {
+    display: inline-block;
+    background: url(../pic/button-category.svg);
+    width: 30px;
+    height: 15px;
+    background-size: 100% 100%;
+}
+.guide-label1 {
+    transform: rotate(90deg);
+}
+.guide-summary > p {  
+  font-size: 26px;
+  font-weight: bolder;
+  color: #43515c;
+}
+.guide-summary ul > p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #43515c;
+}
+.guide-summary ul li > p {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.category-title ul {
+  height: 0;
+  transition: height .3s ease-in-out;
+}
+
+.category-title:hover ul {
+  height: initial;
+}

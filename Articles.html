@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>FirstBlog</title>
     <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/article.css">
 </head>
 <body>
-
 <div class="float-bar">
   <div class="float-back-index"><p>Blog</p></div>
   <div class="float-user">
@@ -15,69 +15,26 @@
   <div class="float-back-camera"><p>Photos</p></div>
 </div>
 
-
-
-<style>
-.guide-bar {
-  position: fixed;
-  left: 0;
-  top: 60px;
-  width: 300px;
-  height: 100%;
-  border: 1px solid #000;
-}
-.guide-bar li {
-  list-style-type: none;
-}
-.guide-summary {
-  margin: 0;
-  padding: 0;
-}
-.guide-summary hr {
-  width: 80%;
-  border: 0;
-  border-top: 1px solid grey;
-}
-.guide-summary ul > label {
-    display: inline-block;
-    background: url(static/pic/button-category.svg);
-    width: 30px;
-    height: 15px;
-    background-size: 100% 100%;
-}
-.guide-summary > p {  font-size: 26px;
-  font-weight: bolder;
-  color: #43515c;
-}
-.guide-summary ul > p {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #43515c;
-}
-.guide-summary ul li > p {
-  font-size: 14px;
-  margin-left: 10px;
-}
-</style>
 <div class="guide-bar">
-  <ul class="guide-summary"><p>文章分类</p>
-    <ul><label for="label1"></label><p id="label1">前端攻城狮必备</p>
-      <li><p>HTML5小技巧</p></li>
-      <li><p>CSS布局样式</p></li>
-      <li><p>Javascript学习攻略</p></li>
-    </ul>
-    <hr>
-    <ul><label for="label2"></label><p id="label2">算法学习</p>
+  <ul class="guide-summary">
+    <p>文章分类</p>
+    <li class="category-title" data-name="fe"><label class="guide-label0"></label>前端攻城狮必备
+      <ul>
+        <li><p>HTML5小技巧</p></li>
+        <li><p>CSS布局样式</p></li>
+        <li><p>Javascript学习攻略</p></li>
+      </ul>
+    </li>
+    <ul><p class="category-title" data-name="alog"><label class="guide-label0"></label>算法学习</p>
       <li><p>经验总结</p></li>
       <li><p>热门网站</p></li>
     </ul>
-    <hr>
-    <ul><label for="label3"></label><p id="label3">随笔小记</p></ul>
+    <ul><p class="category-title" data-name="note"><label class="guide-label0"></label>随笔小记</p></ul>
   </ul>
 </div>
 
+<script src="./static/js/tool.js"></script>
+<script src="./static/js/main.js"></script>
+<script src="./static/js/article.js"></script>
 </body>
 </html>

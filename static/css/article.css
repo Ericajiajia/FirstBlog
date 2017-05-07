@@ -2,76 +2,99 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 1300px;
+  min-width: 800px;
 }
-
-/*上边栏*/
-.float-bar {
-  position: fixed;
-  z-index: 103;
-  top: 0;
-  left: 0;
-  height: 60px;
-  width: 100%;
-  min-width: 1100px;
-  background-color: rgba(93, 196, 215, 0.42);
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-}
-.float-user {
-    position: relative;
-    width: 140px;
-    cursor: pointer;
-}
-.float-user div {    
-    background-image: url(../pic/head_wolf.jpg);
-    background-size: 103% 138%;
-    width: 80px;
-    height: 80px;
-    margin-top: 5px;
-    border-radius: 40px;
-}
-.float-user::after {    
-    content: "Jia Hao";
-    font-size: 14px;
-    font-weight: bolder;
-    margin-top: -55px;
-    float: right;
-}
-.float-back-index, .float-back-camera {
-  position: relative;
-  font-size: 26px;
-  width: 120px;
-  height: 100%;
-  font-weight: bolder;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-.float-back-index p, .float-back-camera p {
-    margin-top: 12px;
-}
-.float-back-index:hover, .float-back-camera:hover {
-  background: rgba(29, 207, 242, 0.4);
-}
-
-
 
 
 /*左侧栏导航*/
 .guide-bar {
   position: fixed;
+  z-index: -1;
   left: 0;
-  top: 60px;
+  top: 0;
   width: 300px;
   height: 100%;
+  border: 0;
+  border-right: 1px solid grey;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14);
+}
+
+/*左侧导航栏的用户名区*/
+.guide-user {
+  width: 100%;
+  height: 150px;
   background: rgba(158, 158, 158, 0.47);
 }
+.guide-user-head {
+  position: relative;
+  top: 10px;
+  margin: 0 38%;
+  width: 120px;
+  height: 70px;
+  cursor: pointer;
+}
+.guide-user-head div {
+  width: 70px;
+  height: 100%;
+  border-radius: 35px;
+  background-image: url(../pic/head_fox.jpg);
+  background-size: 105% 140%;
+}
+.guide-user-head::after {
+  content: "Jia Hao";
+  font-size: 14px;
+  font-weight: bolder;
+  text-shadow: 1px 1px grey;
+  float: right;
+  margin-top: -20px;
+}
+.guide-user-signal {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  color: #43515c;
+}
+
+/*页面跳转链接*/
+.guide-sorts {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6px;
+}
+.guide-sorts div {
+  width: 50%;
+  height: 100%;
+  font-size: 22px;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+}
+.guide-sorts div a {
+  display: inline-block;
+  margin: 5px auto 0;
+  padding: 0;
+}
+.guide-sorts div:nth-child(1) {
+  background: rgba(246, 53, 38, 0.63);
+}
+.guide-sorts div:nth-child(2) {
+  background: rgba(251, 123, 0, 0.66);
+}
+.guide-sorts div:hover {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14);
+}
+
+/*左侧导航栏的文章分类区*/
 .guide-bar li {
   list-style-type: none;
 }
 .guide-summary {
   margin: 0;
+  margin-top: 10px;
   padding: 0;
 }
 .guide-summary hr {
@@ -85,11 +108,13 @@ html, body {
   width: 30px;
   height: 15px;
   background-size: 100% 100%;
-}
-.guide-label1 {
   transform: rotate(90deg);
 }
+.guide-label1 {
+  transform: rotate(0deg);
+}
 .guide-summary > p {  
+  user-select: none;
   font-size: 26px;
   font-weight: bolder;
   margin-left: 25px;

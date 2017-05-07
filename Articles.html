@@ -6,15 +6,26 @@
     <link rel="stylesheet" href="static/css/article.css">
 </head>
 <body>
-<div class="float-bar">
-  <div class="float-back-index"><p>Blog</p></div>
-  <div class="float-user">
-    <div></div>
-  </div>
-  <div class="float-back-camera"><p>Photos</p></div>
-</div>
 
+<!-- 左边导航栏 -->
 <div class="guide-bar">
+
+  <!-- 用户区 -->
+  <div class="guide-user">
+    <!-- 用户头像区 -->
+    <div class="guide-user-head">
+      <div></div>
+    </div>
+    <!-- 用户签名区 -->
+    <div class="guide-user-signal">始于平凡，臻于完善</div>
+    <!-- 页面跳转区 -->
+    <div class="guide-sorts">
+      <div class="guide-blog"><a>BLOG</a></div>
+      <div class="guide-photos"><a>PHOTOS</a></div>
+    </div>
+  </div>
+
+  <!-- 文章分类栏 -->
   <ul class="guide-summary">
     <p>文章分类</p>
     <li class="category-title" data-name="fe">
@@ -50,6 +61,85 @@
   </ul>
 </div>
 
+<!-- 右侧文章展示区 -->
+<div class="show-note">
+  <!-- 文章分块 -->
+  <div>
+    <div></div>
+    <div>
+      <p>Article 1</p>
+      <a href="#">More</a>
+    </div>
+  </div>
+  <div>
+    <div></div>
+    <div>
+      <p>Article 2</p>
+      <a href="#">More</a>
+    </div>
+  </div>
+  <div>
+    <div></div>
+    <div>
+      <p>Article 3</p>
+      <a href="#">More</a>
+    </div>
+  </div>
+  <div>
+    <div></div>
+    <div>
+      <p>Article 4</p>
+      <a href="#">More</a>
+    </div>
+  </div>
+  <div>
+    <div></div>
+    <div>
+      <p>Article 5</p>
+      <a href="#">More</a>
+    </div>
+  </div>
+</div>
+<style>
+.show-note {
+  width: calc(100% - 380px);
+  float: right;
+  margin-right: 0;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.show-note > div {
+  margin: 0 30px 20px 0;
+  width: 290px;
+  height: 290px;
+  border: 1px solid #000;
+}
+.show-note > div > div:nth-child(1) {
+  width: 100%;
+  height: 220px;
+  background: grey;
+}
+.show-note > div > div:nth-child(2) {
+  width: 100%;
+  height: calc(100% - 220px);
+  margin-top: -15px;
+}
+.show-note > div > div p {
+  font-size: 26px;
+  font-weight: bolder;
+  text-align: center;
+}
+.show-note > div > div a {
+  margin: -20px 10px 0 0;
+  font-size: 10px;
+  display: inline-block;
+  float: right;
+  color: #EF5350;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
 
 <script src="./static/js/tool.js"></script>
 <script src="./static/js/article.js"></script>

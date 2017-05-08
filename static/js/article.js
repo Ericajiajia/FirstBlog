@@ -1,4 +1,6 @@
 var parent = $('.guide-summary')[0]
+var articleUl = $('.category-title ul')
+var articleLi = $('.category-title ul li')
 
 function turnArray (num, labeling, uling) {
   if(labeling[num].className.indexOf("0") !== -1) {
@@ -33,4 +35,22 @@ parent.addEventListener('click', function (e) {
     }
   }
 })
+
+for (var i = 0; i < articleUl.length; i++){
+  articleUl[i].addEventListener("click", function (e) {
+    var childName
+
+    if (e.target.nodeName === "P") {
+      childName = e.target.parentNode
+      for (var j = 0; j < articleLi.length; j++) {
+        articleLi[j].style.background = ""
+      }
+      if (childName.style.background === ""){
+        childName.style.background = "rgba(200, 197, 197, 1)"
+      } else {
+        childName.style.background = ""
+      }
+    }
+  })
+}
 

@@ -1,0 +1,101 @@
+/*登录页面（简单的验证密码，实现背景图轮播）*/
+html,body {
+  width: 100%;
+  min-width: 1100px;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/*页面上半部分*/
+.back-top-pic {
+  width: 100%;
+  height: 95%;
+  background: lightblue;
+}
+/*登录栏*/
+.login-box {
+  width: 300px;
+  height: 350px;
+  position: relative;
+  top: 130px;
+  left: 850px;
+  background: rgba(256, 256, 256, 0.8);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+}
+/*login标题*/
+.back-bar {
+  width: 90%;
+  height: 50px;
+  margin: 5px auto;
+  font-weight: bolder;
+  font-size: 26px;
+}
+.back-bar p {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+}
+/*表单验证区域*/
+form {
+  width: 90%;
+  height: 150px;
+  margin: 30px 20px 0;
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+form > div:nth-child(1), form > div:nth-child(2) {
+  width: 100%;
+  height: 40px;
+}
+form > div label {
+  word-spacing: 3px;
+  font-size: 18px;
+}
+.input-box {
+  border: 1px solid grey;
+  border-radius: 4px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+}
+/*重置按钮和提交按钮*/
+.button {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.submit, .reset {
+  width: 44%;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  border-radius: 4px;
+  background: #cdbca3;
+  font-size: 22px;
+  transition: all .2s ease-out;
+}
+.submit:hover, .reset:hover {
+  background: lightgrey;
+}
+/*没有权限，返回主页*/
+.back-button {
+  width: 90%;
+  font-size: 14px;
+  margin: 50px auto;
+  text-align: center;
+}
+.back-button a {
+  text-decoration: none;
+  color: #33CCFF;
+}

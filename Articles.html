@@ -34,9 +34,9 @@
         前端攻城狮必备
       </p>
       <ul>
-        <li><p>HTML5小技巧</p></li>
-        <li><p>CSS布局样式</p></li>
-        <li><p>Javascript学习攻略</p></li>
+        <li data-cname="fe-h5" class=""><p>HTML5小技巧</p></li>
+        <li data-cname="fe-css" class=""><p>CSS布局样式</p></li>
+        <li data-cname="fe-js" class=""><p>Javascript学习攻略</p></li>
       </ul>
     </li>
     <li class="category-title" data-name="alog">
@@ -45,8 +45,8 @@
         算法学习
       </p>
       <ul>
-        <li><p>经验总结</p></li>
-        <li><p>热门网站</p></li>
+        <li data-cname="alog-expert" class=""><p>经验总结</p></li>
+        <li data-cname="alog-website" class=""><p>热门网站</p></li>
       </ul>
     </li>
     <li class="category-title" data-name="note">
@@ -55,91 +55,71 @@
         随笔小记
       </p>
       <ul>
-        <li><p>心得</p></li>
+        <li data-cname="note-feeling" class=""><p>心得</p></li>
       </ul>
     </li>
   </ul>
 </div>
 
 <!-- 右侧文章展示区 -->
+
+
+
+
+<!-- 晚上补完相应的代码 -->
+
+
+
+
+
 <div class="show-note">
   <!-- 文章分块 -->
   <div>
-    <div></div>
+    <div>
+      <div class="show-summary">我是张汝佳，我是张汝佳，我是张汝佳。</div>
+    </div>
     <div>
       <p>Article 1</p>
-      <a href="#">More</a>
+      <a href="https://www.baidu.com/">More</a>
     </div>
   </div>
   <div>
-    <div></div>
+    <div>
+      <div class="show-summary"></div>
+    </div>
     <div>
       <p>Article 2</p>
-      <a href="#">More</a>
+      <a href="https://www.baidu.com/">More</a>
     </div>
   </div>
   <div>
-    <div></div>
+    <div>
+      <div class="show-summary"></div>
+    </div>
     <div>
       <p>Article 3</p>
-      <a href="#">More</a>
+      <a href="https://www.baidu.com/">More</a>
     </div>
   </div>
   <div>
-    <div></div>
+    <div>
+      <div class="show-summary"></div>
+    </div>
     <div>
       <p>Article 4</p>
-      <a href="#">More</a>
+      <a href="https://www.baidu.com/">More</a>
     </div>
   </div>
   <div>
-    <div></div>
+    <div>
+      <div class="show-summary"></div>
+    </div>
     <div>
       <p>Article 5</p>
-      <a href="#">More</a>
+      <a href="https://www.baidu.com/">More</a>
     </div>
   </div>
 </div>
-<style>
-.show-note {
-  width: calc(100% - 380px);
-  float: right;
-  margin-right: 0;
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.show-note > div {
-  margin: 0 30px 20px 0;
-  width: 290px;
-  height: 290px;
-  border: 1px solid #000;
-}
-.show-note > div > div:nth-child(1) {
-  width: 100%;
-  height: 220px;
-  background: grey;
-}
-.show-note > div > div:nth-child(2) {
-  width: 100%;
-  height: calc(100% - 220px);
-  margin-top: -15px;
-}
-.show-note > div > div p {
-  font-size: 26px;
-  font-weight: bolder;
-  text-align: center;
-}
-.show-note > div > div a {
-  margin: -20px 10px 0 0;
-  font-size: 10px;
-  display: inline-block;
-  float: right;
-  color: #EF5350;
-  text-decoration: none;
-  cursor: pointer;
-}
-</style>
 
 <script src="./static/js/tool.js"></script>
 <script src="./static/js/article.js"></script>

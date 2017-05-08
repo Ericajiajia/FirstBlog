@@ -23,7 +23,7 @@ html, body {
 .guide-user {
   width: 100%;
   height: 150px;
-  background: rgba(158, 158, 158, 0.47);
+  background: rgba(200, 197, 197, 0.75);
 }
 .guide-user-head {
   position: relative;
@@ -97,6 +97,9 @@ html, body {
   margin-top: 10px;
   padding: 0;
 }
+.guide-summary > li {
+  margin-top: 15px;
+}
 .guide-summary hr {
   width: 80%;
   border: 0;
@@ -113,7 +116,7 @@ html, body {
 .guide-label1 {
   transform: rotate(0deg);
 }
-.guide-summary > p {  
+.guide-summary > p {
   user-select: none;
   font-size: 26px;
   font-weight: bolder;
@@ -129,8 +132,87 @@ html, body {
   font-weight: bold;
   color: #43515c;
 }
+.category-title li {
+  height: 44px;
+  margin-left: -40px;
+}
+.category-title li:nth-child(1) {
+  margin-top: -7px;
+}
+.category-title li:nth-child(2), .category-title li:nth-child(3) {
+  margin-top: -14px;
+}
+.category-title li:hover {
+  background: rgba(200, 197, 197, 0.4);
+}
 .category-title li > p {
   font-size: 14px;
-  margin-left: 23px;
+  margin-left: 62px;
+  padding-top: 11px;
   color: #43515c;
+  cursor: pointer;
+}
+
+
+/*文章展示（分块）*/
+.show-note {
+  width: calc(100% - 380px);
+  float: right;
+  margin-right: 0;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.show-note > div {
+  margin: 0 30px 20px 0;
+  width: 290px;
+  height: 290px;
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+}
+.show-note > div > div:nth-child(1) {
+  width: 100%;
+  height: 220px;
+  background: grey;
+  opacity: 1;
+  overflow: hidden;
+  transition: all .2s ease-out;
+}
+.show-summary {
+  background: rgba(256, 256, 256, 0.2);
+  width: 100%;
+  height: 100%;
+  text-indent: 2em;
+  font-size: 20px;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+}
+.show-summary:hover {
+  top: 0;
+  opacity: 2;
+}
+.show-note > div > div:nth-child(1):hover {
+  opacity: 0.4;
+}
+.show-note > div > div:nth-child(2) {
+  width: 100%;
+  height: calc(100% - 220px);
+  margin-top: -15px;
+}
+.show-note > div > div p {
+  font-size: 26px;
+  font-weight: bolder;
+  text-align: center;
+}
+.show-note > div > div a {
+  margin: -20px 10px 0 0;
+  font-size: 10px;
+  display: inline-block;
+  float: right;
+  color: #EF5350;
+  text-decoration: none;
+  cursor: pointer;
 }

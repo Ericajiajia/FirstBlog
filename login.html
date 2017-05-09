@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="static/css/login.css">
-<style>
-
-</style>
-
 </head>
 <body>
 <!-- 页面实现轮播图形式，内部有登录框 -->
 <div class="back-top-pic">
+
+  <!-- 轮播图背景图片 -->
+  <ul class="imgs" id="imgs">
+    <li class="on"><img src="static/pic/loop1.jpg" /></li>
+    <li><img src="static/pic/loop2.jpg" /></li>
+    <li><img src="static/pic/loop3.jpg" /></li>
+    <li><img src="static/pic/loop4.jpg" /></li>
+    <li><img src="static/pic/loop5.jpg" /></li>
+  </ul>
+
+  <!-- 轮播图指示标 -->
+  <ul class="order" id="order">
+    <li data-index=0 class="on"></li>
+    <li data-index=1></li>
+    <li data-index=2></li>
+    <li data-index=3></li>
+    <li data-index=4></li>
+  </ul>
+
   <!-- 登陆栏 -->
   <div class="login-box">
     <div class="back-bar">
@@ -20,7 +35,7 @@
     <form>
       <!-- 用户名和密码 -->
       <div>
-        <label for="User-name">用户名：</label><input type="text" name="User-name" id="User-name" size="16" class="input-box">
+        <label for="User-name">用户名：</label><input type="text" name="User-name" id="User-name" size="16" class="input-box" autocomplete="off">
       </div>
       <div>
         <label for="password">密&nbsp;&nbsp;码：</label><input type="password" name="password" id="password" size="16" class="input-box">
@@ -37,12 +52,6 @@
     </div>
   </div>
 </div>
-
-<!-- 页面底部栏（版权保留之类） -->
-<div class="login-bottom-bar">
-  
-</div>
-
 <script src="./static/js/tool.js"></script>
 <script src="./static/js/login.js"></script>
 </body>

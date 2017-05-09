@@ -11,14 +11,68 @@ html,body {
 /*页面上半部分*/
 .back-top-pic {
   width: 100%;
-  height: 95%;
-  background: lightblue;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
 }
+/*轮播图背景图*/
+.imgs {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+.imgs > li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+#imgs .on {
+  display: block;
+  opacity: 1;
+}
+.imgs img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+/*轮播图按钮*/
+.order {
+  width: 200px;
+  height: 20px;
+  list-style-type: none;
+  position: absolute;
+  z-index: 20;
+  top: 550px;
+  left: calc(50% - 120px);
+}
+.order > li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 10px;
+  display: inline-block;
+}
+#order .on {
+  background: rgb(255, 247, 97);
+}
+
 /*登录栏*/
 .login-box {
   width: 300px;
   height: 350px;
   position: relative;
+  z-index: 100;
   top: 130px;
   left: 850px;
   background: rgba(256, 256, 256, 0.8);
@@ -42,7 +96,6 @@ html,body {
   text-align: center;
   border: 0;
   border-bottom: 1px solid lightgrey;
-  cursor: pointer;
 }
 /*表单验证区域*/
 form {
@@ -98,4 +151,7 @@ form > div label {
 .back-button a {
   text-decoration: none;
   color: #33CCFF;
+}
+.back-button a:hover {
+  color: #3388ff;
 }

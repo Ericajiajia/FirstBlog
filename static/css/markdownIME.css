@@ -1,0 +1,59 @@
+/* for twemoji */
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #444;
+  color: #EEE;
+  font-family: "DejaVu Sans", Arial, sans-serif;
+}
+.top-bar {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.top-bar p {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  text-align: center;
+  color: #fff;
+}
+#editor {
+  color: #000;
+  box-shadow: 0 2px 5px #000;
+  background: #eee;
+  padding: 10px 20px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+blockquote {
+  border-left: 10px solid #ccc;
+  background: #FFF;
+  margin: 1em;
+  padding: .5em 1em;
+}
+code, pre {
+  background: #FFF;
+  padding: 2px 5px;
+  font-size: .87em;
+  margin: initial 5px;
+  font-family: "DejaVu Sans Mono", "Consolas", "Courier New", monospace;
+}
+table, td, th {
+  border-collapse:collapsed;
+  border: 1px solid #333;
+}
+.emoji {
+  height: 1em;
+  vertical-align: middle;
+}
+div {
+  margin-top: 50px;
+  width: 100%;
+  height: 1000px;
+  border: 1px solid #000;
+}

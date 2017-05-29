@@ -6,6 +6,7 @@ html,body {
   overflow: hidden;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 /*页面上半部分*/
@@ -47,99 +48,102 @@ html,body {
 }
 /*轮播图按钮*/
 .order {
-  width: 200px;
-  height: 20px;
+  width: 80px;
+  height: 8px;
   list-style-type: none;
   position: absolute;
   z-index: 20;
-  top: 550px;
-  left: calc(50% - 120px);
+  top: 90%;
+  left: calc(50% - 50px);
+  display: flex;
+  justify-content: space-between;
+  display: none;
 }
 .order > li {
-  width: 20px;
-  height: 20px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  margin-right: 10px;
-  display: inline-block;
+  border: 1px solid #fff;
 }
 #order .on {
-  background: rgb(255, 247, 97);
+  background: #fff;
 }
 
 /*登录栏*/
 .login-box {
-  width: 300px;
-  height: 350px;
-  position: relative;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   z-index: 100;
-  top: 130px;
-  left: 850px;
-  background: rgba(256, 256, 256, 0.8);
-  border: 1px solid #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .4);
 }
 /*login标题*/
 .back-bar {
-  width: 90%;
-  height: 50px;
-  margin: 5px auto;
-  font-weight: bolder;
-  font-size: 26px;
-}
-.back-bar p {
   width: 50%;
-  height: 40px;
-  line-height: 40px;
-  margin: 10px auto;
+  margin: 14% auto 0;
+}
+.back-bar > p:nth-child(1), .back-bar > p:nth-child(2) {
+  width: 80%;
+  margin: 13px auto;
+  color: #fff;
   text-align: center;
-  border: 0;
-  border-bottom: 1px solid lightgrey;
+}
+.back-bar > p:nth-child(1) {
+  letter-spacing: 3px;
+  font-size: 46px;
+  font-weight: bolder;
+}
+.back-bar > p:nth-child(2) {
+  font-size: 20px;
 }
 /*表单验证区域*/
 form {
-  width: 90%;
-  height: 150px;
-  margin: 30px 20px 0;
+  width: 50%;
+  margin: 10px auto;
   display: flex;
-  align-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
 }
-form > div:nth-child(1), form > div:nth-child(2) {
-  width: 100%;
+form > div:nth-child(1) {
+  width: 68%;
   height: 40px;
-}
-form > div label {
-  word-spacing: 3px;
-  font-size: 18px;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-between;
 }
 .input-box {
-  border: 1px solid grey;
+  width: 45%;
+  border: 2px solid grey;
   border-radius: 4px;
-  height: 25px;
-  line-height: 25px;
+  height: 30px;
+  line-height: 30px;
   font-size: 16px;
+  outline: none;
+  color: grey;
+  letter-spacing: 2px;
+  text-decoration: none;
 }
 /*重置按钮和提交按钮*/
 .button {
-  width: 100%;
+  margin: 0 auto;
+  width: 68%;
   margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
 }
-.submit, .reset {
-  width: 44%;
-  height: 30px;
-  line-height: 30px;
+.submit {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
   border: 0;
   border-radius: 4px;
-  background: #cdbca3;
-  font-size: 22px;
+  background: #2ECC71;
+  font-size: 18px;
+  color: #fff;
   transition: all .2s ease-out;
 }
-.submit:hover, .reset:hover {
-  background: lightgrey;
+.submit:hover {
+  background: #28B463;
 }
 /*没有权限，返回主页*/
 .back-button {
@@ -149,9 +153,6 @@ form > div label {
   text-align: center;
 }
 .back-button a {
-  text-decoration: none;
-  color: #33CCFF;
-}
-.back-button a:hover {
-  color: #3388ff;
+  color: #fff;
+  transition: all .4s ease-out;
 }

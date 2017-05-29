@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown</title>
+    <link rel="stylesheet" href="../markdown/css/editormd.min.css">
+</head>
+
+<body>
+<div id="test-editormd">
+  <textarea style="display:none;">## Write down What you want to remember!</textarea>
+</div>
+<script src="./markdown/examples/js/jquery.min.js"></script>
+<script src="./markdown/editormd.js"></script>
+<script type="text/javascript">
+  var testEditor;
+  $(function() {
+    testEditor = editormd("test-editormd", {
+      width: "90%",
+      height: 600,
+      path: "../markdown/lib/"
+    });
+  });
+</script>
+</body>
+</html>

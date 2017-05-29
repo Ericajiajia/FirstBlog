@@ -5,7 +5,7 @@ var orderlis = $(".order li")
 var num = 0
 var interval
 var submit = $(".submit")[0]
-var inputValue0, inputValue1
+var user-name, password
 
 // 让当前图片及时显现
 var play = function (num) {
@@ -16,6 +16,7 @@ var play = function (num) {
   imglis[num].className = 'on'
   orderlis[num].className = 'on'
 }
+
 // 让图片自动播放
 var autoplay = function () {
   interval = setInterval (function () {
@@ -24,23 +25,14 @@ var autoplay = function () {
     play (num)
   }, 3000)
 }
+
 autoplay()
-// 给每个小按钮绑定鼠标事件
-for (var j = 0; j < orderlis.length; j++){
-  orderlis[j].addEventListener("mouseover", function () {
-    num = this.dataset.index
-    play (num)
-    clearInterval (interval)
-  })
-  orderlis[j].addEventListener("mouseout", function () {
-    autoplay ()
-  })
-}
+
 // 给提交按钮绑定事件
 submit.addEventListener("click", function () {
-  inputValue0 = $(".input-box")[0].value
-  inputValue1 = $(".input-box")[1].value
-  if (inputValue0 === "Ericajiajia" && inputValue1 === "sherhooo"){
+  user-name = $(".input-box")[0].value
+  password = $(".input-box")[1].value
+  if (user-name === "Ericajiajia" && password === "sherhooo"){
     window.open("private.html", '_blank')
   } else {
     alert("你没有权限访问私人页面，请联系Jiajia！")

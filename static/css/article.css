@@ -41,7 +41,7 @@ html, body {
   background-size: 105% 140%;
 }
 .guide-user-head::after {
-  content: "Jia Hao";
+  content: "Jia Jia";
   font-size: 14px;
   font-weight: bolder;
   text-shadow: 1px 1px grey;
@@ -79,10 +79,10 @@ html, body {
   padding: 0;
 }
 .guide-sorts div:nth-child(1) {
-  background: rgba(246, 53, 38, 0.63);
+  background: rgba(253, 159, 85, 0.63);
 }
 .guide-sorts div:nth-child(2) {
-  background: rgba(251, 123, 0, 0.66);
+  background: rgba(116, 178, 212, 0.34);
 }
 .guide-sorts div:hover {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14);

@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Markdown</title>
-    <link rel="stylesheet" href="../markdown/css/editormd.min.css">
+    <link rel="stylesheet" href="./markdown/css/editormd.css">
 </head>
 
 <body>
+<input type="button" value="click" class="button">
 <div id="test-editormd">
   <textarea style="display:none;">## Write down What you want to remember!</textarea>
 </div>
+<div class="view-area"></div>
 <script src="./markdown/examples/js/jquery.min.js"></script>
 <script src="./markdown/editormd.js"></script>
+<script src="./static/js/marktohtml.js"></script>
 <script type="text/javascript">
   var testEditor;
   $(function() {
     testEditor = editormd("test-editormd", {
       width: "90%",
-      height: 600,
+      height: 700,
       path: "../markdown/lib/"
     });
   });

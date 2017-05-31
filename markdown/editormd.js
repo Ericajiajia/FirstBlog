@@ -9,7 +9,7 @@
  * {@link       https://github.com/pandao/editor.md}
  * @updateTime  2015-06-09
  */
-
+var i = 0
 ;(function(factory) {
     "use strict";
     
@@ -69,24 +69,22 @@
             "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|", 
             "h1", "h2", "h3", "h4", "h5", "h6", "|", 
             "list-ul", "list-ol", "hr", "|",
-            "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime", "emoji", "html-entities", "pagebreak", "|",
-            "goto-line", "watch", "preview", "fullscreen", "clear", "search", "|",
-            "help", "info"
+            "link", "reference-link", "preformatted-text", "code-block", "table", "datetime", "html-entities", "pagebreak", "|",
+            "goto-line", "watch", "preview", "fullscreen", "|",
+            "help", "save", "emoji"
         ],
         simple : [
             "undo", "redo", "|", 
-            "bold", "del", "italic", "quote", "uppercase", "lowercase", "|", 
-            "h1", "h2", "h3", "h4", "h5", "h6", "|", 
+            "bold", "del", "italic", "quote", "uppercase", "lowercase", "|", "image", "code", "|", 
             "list-ul", "list-ol", "hr", "|",
-            "watch", "preview", "fullscreen", "|",
-            "help", "info"
+            "watch", "preview", "fullscreen", "clear", "search", "|",
         ],
         mini : [
             "undo", "redo", "|",
             "watch", "preview", "|",
-            "help", "info"
+            "help", "save"
         ]
-    };
+    };              //把info改成了save
     
     editormd.defaults     = {
         mode                 : "gfm",          //gfm or markdown
@@ -104,7 +102,7 @@
         delay                : 300,            // Delay parse markdown to html, Uint : ms
         autoLoadModules      : true,           // Automatic load dependent module files
         watch                : true,
-        placeholder          : "Enjoy Markdown! coding now...",
+        placeholder          : "Write down What you want to remember!",
         gotoLine             : true,
         codeFold             : false,
         autoHeight           : false,
@@ -162,7 +160,7 @@
         atLink               : true,           // for @link
         emailLink            : true,           // for email address auto link
         taskList             : false,          // Enable Github Flavored Markdown task lists
-        emoji                : false,          // :emoji: , Support Github emoji, Twitter Emoji (Twemoji);
+        emoji                : true,          // :emoji: , Support Github emoji, Twitter Emoji (Twemoji);
                                                // Support FontAwesome icon emoji :fa-xxx: > Using fontAwesome icon web fonts;
                                                // Support Editor.md logo icon emoji :editormd-logo: :editormd-logo-1x: > 1~8x;
         tex                  : false,          // TeX(LaTeX), based on KaTeX
@@ -222,13 +220,13 @@
             fullscreen       : "fa-arrows-alt",
             clear            : "fa-eraser",
             help             : "fa-question-circle",
-            info             : "fa-info-circle"
+            save             : "fa-save"                    //原本为info
         },        
         toolbarIconTexts     : {},
         
         lang : {
             name        : "zh-cn",
-            description : "开源在线Markdown编辑器<br/>Open source online Markdown editor.",
+            description : "Markdown编辑器<br/>Used by Jiajia's blog.",
             tocTitle    : "目录",
             toolbar     : {
                 undo             : "撤销（Ctrl+Z）",
@@ -268,7 +266,7 @@
                 clear            : "清空",
                 search           : "搜索",
                 help             : "使用帮助",
-                info             : "关于" + editormd.title
+                save             : "保存"                                     //原本为"关于" + editormd.title
             },
             buttons : {
                 enter  : "确定",
@@ -3178,8 +3176,19 @@
             this.executePlugin("helpDialog", "help-dialog/help-dialog");
         },
 
-        info : function() {
-            this.showInfoDialog();
+        save : function() {                                 //this.showInfoDialog();
+            var save = document.getElementsByClassName('fa-save')[0]
+            var saveFunc = function () {
+                i ++
+                saveArr.push(document.getElementsByClassName('editormd-preview')[0].innerHTML)
+                document.getElementsByClassName('view-area')[0].innerHTML = saveArr[saveArr.length - 1]
+                console.log(saveArr)
+                if(i === 1) {
+                    i = 0
+                    save.removeEventListener('click', saveFunc)
+                }
+            }
+            save.addEventListener('click', saveFunc)
         }
     };
     

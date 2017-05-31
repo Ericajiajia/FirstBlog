@@ -1,215 +1,278 @@
-/*Article页面*/
-html, body {
+#ff0000, body {
+  width: 100%;
+  min-width: 1100px;
+  height: 100%;
   margin: 0;
   padding: 0;
-  min-width: 800px;
 }
-
-
-/*左侧栏导航*/
-.guide-bar {
+/*悬浮栏样式*/
+.fixed-bar {
   position: fixed;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  width: 300px;
-  height: 100%;
-  border: 0;
-  border-right: 1px solid grey;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14);
-}
-
-/*左侧导航栏的用户名区*/
-.guide-user {
+  z-index: 100;
   width: 100%;
-  height: 150px;
-  background: rgba(200, 197, 197, 0.75);
+  min-width: 1100px;
+  height: 60px;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  display: flex;
+  border: 0;
+  border-bottom: 1px solid #f5f5f5;
 }
-.guide-user-head {
-  position: relative;
-  top: 10px;
-  margin: 0 38%;
-  width: 120px;
-  height: 70px;
+.fixed-bar > div {
+  height: 100%;
+}
+.guide-user {
+  width: 220px;
+  margin-left: 10%;
+  margin-right: 125px;
+}
+.guide-user-img {
+  width: 50px;
+  height: 50px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: url(../pic/head_panda.jpg);
+  background-size: 105% 140%;
   cursor: pointer;
 }
-.guide-user-head div {
-  width: 70px;
-  height: 100%;
-  border-radius: 35px;
-  background-image: url(../pic/head_fox.jpg);
-  background-size: 105% 140%;
-}
-.guide-user-head::after {
-  content: "Jia Jia";
-  font-size: 14px;
-  font-weight: bolder;
-  text-shadow: 1px 1px grey;
+.guide-user::after {
+  content: '不认命，不低头，不将就';
   float: right;
   margin-top: -20px;
-}
-.guide-user-signal {
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bolder;
-  color: #43515c;
-}
-
-/*页面跳转链接*/
-.guide-sorts {
-  width: 100%;
-  height: 32px;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 6px;
-}
-.guide-sorts div {
-  width: 50%;
-  height: 100%;
-  font-size: 22px;
-  font-weight: bolder;
-  text-align: center;
-  cursor: pointer;
-}
-.guide-sorts div a {
-  display: inline-block;
-  margin: 5px auto 0;
-  padding: 0;
-}
-.guide-sorts div:nth-child(1) {
-  background: rgba(253, 159, 85, 0.63);
-}
-.guide-sorts div:nth-child(2) {
-  background: rgba(116, 178, 212, 0.34);
-}
-.guide-sorts div:hover {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14);
-}
-
-/*左侧导航栏的文章分类区*/
-.guide-bar li {
-  list-style-type: none;
-}
-.guide-summary {
-  margin: 0;
-  margin-top: 10px;
-  padding: 0;
-}
-.guide-summary > li {
-  margin-top: 15px;
-}
-.guide-summary hr {
-  width: 80%;
-  border: 0;
-  border-top: 1px solid grey;
-}
-.guide-label0, .guide-label1 {
-  display: inline-block;
-  background: url(../pic/button-category.svg);
-  width: 30px;
-  height: 15px;
-  background-size: 100% 100%;
-  transform: rotate(90deg);
-}
-.guide-label1 {
-  transform: rotate(0deg);
-}
-.guide-summary > p {
-  user-select: none;
-  font-size: 26px;
-  font-weight: bolder;
-  margin-left: 25px;
-  color: #43515c;
-}
-.category-title > p {
-  display: inline-block;
-  margin: 0;
-  margin-left: 25px;
-  padding: 0;
-  font-size: 20px;
-  font-weight: bold;
-  color: #43515c;
-}
-.category-title li {
-  height: 44px;
-  margin-left: -40px;
-}
-.category-title li:nth-child(1) {
-  margin-top: -7px;
-}
-.category-title li:nth-child(2), .category-title li:nth-child(3) {
-  margin-top: -14px;
-}
-.category-title li:hover {
-  background: rgba(200, 197, 197, 0.4);
-}
-.category-title li > p {
   font-size: 14px;
-  margin-left: 62px;
-  padding-top: 11px;
-  color: #43515c;
-  cursor: pointer;
+  font-weight: 600;
+  color: #6b6b6b;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .24);
+  cursor: default;
 }
-
-
-/*文章展示（分块）*/
-.show-note {
-  width: calc(100% - 380px);
-  float: right;
-  margin-right: 0;
-  margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-}
-.show-note > div {
-  margin: 0 30px 20px 0;
-  width: 290px;
-  height: 290px;
-  border: 1px solid #fafafa;
-  border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
-}
-.show-note > div > div:nth-child(1) {
-  width: 100%;
-  height: 220px;
-  background: grey;
-  overflow: hidden;
-  transition: all .2s ease-out;
-}
-.show-summary {
-  background: rgba(256, 256, 256, 0.2);
-  width: 100%;
-  height: 100%;
-  text-indent: 2em;
-  font-size: 20px;
-  position: relative;
-  top: 250px;
-  transition: all .4s ease-out;
-}
-.show-note > div > div:hover .show-summary {
-  top: 0;
-}
-.show-note > div > div:nth-child(1):hover {
-  background: lightgrey;
-}
-.show-note > div > div:nth-child(2) {
-  width: 100%;
-  height: calc(100% - 220px);
-  margin-top: -15px;
-}
-.show-note > div > div p {
+.guide-blog, .guide-photos, .guide-articles {
+  width: 13%;
+  line-height: 10px;
+  padding-top: 30px;
+  color: #000;
+  text-align: center;
   font-size: 26px;
   font-weight: bolder;
-  text-align: center;
-}
-.show-note > div > div a {
-  margin: -20px 10px 0 0;
-  font-size: 10px;
-  display: inline-block;
-  float: right;
-  color: #EF5350;
-  text-decoration: none;
+  color: #6b6b6b;
   cursor: pointer;
+}
+.guide-blog:hover, .guide-photos:hover, .guide-articles:hover {
+  background: #f5f5f5;
+}
+/*文章容器样式*/
+.container {
+  width: 80%;
+  height: auto;
+  margin: 80px auto;
+  animation-name: containerIn;
+  animation-duration: 1s;
+}
+@keyframes containerIn {
+  from {
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform-origin: top;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+/*评论区样式*/
+.comment {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+/*评论区头部工具条样式*/
+.comment-bar {
+  width: 100%;
+  height: 50px;
+}
+.comment-bar-img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #ef6b6b;
+  background-image: url(../pic/comment_pen.png);
+  background-repeat: no-repeat;
+  background-size: 60% 60%;
+  background-position: center center; 
+  border-radius: 50%;
+  transition: box-shadow .3s ease-out;
+  cursor: pointer;
+}
+.comment-bar-img:hover {
+  box-shadow: 0px 0px 12px 2px rgba(239, 107, 107, 0.73);
+}
+.comment-bar-word {
+  display: none;
+  width: calc(100% - 80px);
+  float: right;
+  height: 100%;
+  border: 0;
+  border-bottom: 1px dashed #9e9e9e;
+  animation-name: fadeIn;
+  animation-duration: .4s;
+}
+@keyframes fadeIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: calc(100% - 80px);
+    opacity: 1;
+  }
+}
+.comment-bar-word p {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 26px;
+}
+/*待评论区样式*/
+.comment-area {
+  display: none;
+  width: 100%;
+  animation-name: slideIn;
+  animation-duration: 2s;
+}
+@keyframes slideIn {
+  from {
+    transform-origin: top; 
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform-origin: top; 
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.comment-write {
+  display: inline-block;
+  width: 70%;
+  height: 250px;
+  margin: 60px 0 0 100px;
+}
+.comment-write-head {
+  display: inline-block;
+  width: 30%;
+  height: auto;
+  vertical-align: top;
+}
+.comment-write-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 40px 20px 20px 100px;
+  background-image: url(../pic/head_panda.jpg);
+  background-size: 105% 140%;
+}
+.comment-write-name {
+  width: 50%;
+  margin-left: 35%;
+  height: 30px;
+  font-size: 20px;
+  outline: none;
+  padding: 3px;
+  border: 1px solid #9f9f9f;
+  border-radius: 5px;
+}
+.comment-write-area {
+  display: inline-block;
+  width: 400px;
+  height: 200px;
+  outline: none;          /*去除选中时的蓝色框*/
+  resize: none;             /*去除可拖动改变大小的边框角*/
+  border: 1px solid #9f9f9f;
+  border-radius: 14px;
+  padding: 10px;
+  font-size: 16px;
+}
+.comment-write-submit {
+  vertical-align: text-bottom;
+  width: 80px;
+  height: 40px;
+  background: #cfe6f4;
+  font-size: 20px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*已评论区样式*/
+.comment-read {
+  width: 100%;
+  height: auto;
+}
+.comment-read-word {
+  width: 84%;
+  height: auto;
+  margin: 30px auto;
+  font-size: 20px;
+  color: rgba(80, 80, 80, 0.89);
+  border: 0;
+  border-bottom: 1px dashed #9e9e9e;
+  text-indent: 10px;
+  word-spacing: 1px;
+}
+.comment-read-word span {
+  font-size: 22px;
+}
+.comment-read-block {
+  width: 60%;
+  height: 200px;
+  margin: 50px auto;
+  border-bottom: 1px dotted #9e9e9e;
+}
+.comment-read-block:last-child {
+  border: 0;
+}
+.comment-read-head {
+  float: left;
+  top: 30px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url(../pic/head_panda.jpg);
+  background-repeat: no-repeat;
+  background-size: 105% 140%;
+}
+.comment-read-content {
+  float: left;
+  width: 70%;
+  height: 80%;
+  margin-left: 5%;
+}
+.content-name {
+  font-size: 16px;
+}
+.content-name span {
+  font-size: 18px;
+  color: #E53935;
+  font-weight: 600;
+}
+.content-body {
+  font-size: 14px;
+  text-indent: 28px;
+  margin: 15px;
+}
+.comment-read-favor {
+  float: right;
+  height: 13%;
+  margin-right: 120px;
+  font-size: 10px;
+  color: #ff0000;
+  cursor: pointer;
+}
+/*页面底部留白部分*/
+.page-bottom {
+  width: 100%;
+  height: 100px;
 }

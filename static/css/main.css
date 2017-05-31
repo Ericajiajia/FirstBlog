@@ -146,7 +146,7 @@
     transition: all 0.5s;
 }
 .menu-user span:hover {
-    box-shadow: 1px 1px 5px lightblue;
+    box-shadow: 1px 1px 5px #add8e6;
 }
 .menu-user a {
     float: left;
@@ -157,18 +157,18 @@
     transition: all 0.3s;
 }
 .menu-user a:hover {
-    text-shadow: 1px 1px 2px gray;
+    text-shadow: 1px 1px 2px #808080;
 }
 .menu-photos a, .menu-articles a, .menu-more a {
     display: inline-block;
     margin: 20px auto;
     text-decoration: none;
-    color: #000;
+    color: #000000;
     cursor: pointer;
 }
 .menu-photos, .menu-articles, .menu-more {
     text-align: center;
-    transition: all 0.3s;
+    transition: background-color 0.3s ease-out;
 }
 .menu-photos:hover, .menu-articles:hover, .menu-more:hover {
     background-color: #ffdab9;
@@ -179,7 +179,7 @@
     height: 36px;
     margin: 16px 10px 0;
     border: 0;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #d3d3d3;
 }
 .search-icon {
     float: left;
@@ -202,7 +202,7 @@
     height: 30px;
     width: 95%;
     font-size: 18px;
-    color: #000;
+    color: #000000;
     outline: none;
     text-decoration: none;
 }
@@ -221,6 +221,15 @@
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+}
+.photos-logo {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url(../pic/camera.png);
+    background-size: 100% 100%;
+    margin-left: 50px;
+    cursor: pointer;
 }
 .top-photos, .bottom-photos {
     margin: 0 auto;
@@ -344,7 +353,8 @@
     top: -440px;
     opacity: 0;
     border-radius: 4px;
-    transition: all .4s ease-out;
+    transition: top .4s ease-out;
+    transition: opacity .4s ease-out;
 }
 .article-bg1:hover .articles-entry, .article-bg2:hover .articles-entry, .article-bg3:hover .articles-entry,.article-bg4:hover .articles-entry {
     opacity: 0.8;
@@ -362,11 +372,12 @@
     width: 66px;
     height: 25px;
     border-radius: 10px;
-    background: lightskyblue;
+    background: #87cefa;
     position: relative;
     top: 90px;
     left: 60px;
     text-align: center;
+    font-size: 16px;
     cursor: pointer;
     box-shadow: 0px 1px 1px 0px #246faf, 0px 4px 6px 0px rgba(31, 89, 140, .14);
     transition: background .4s ease;

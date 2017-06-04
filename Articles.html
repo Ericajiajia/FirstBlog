@@ -2,7 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>articles</title>
+    <title>Jiajia's Blog</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./static/pic/luckyplant.ico">
     <link rel="stylesheet" href="./static/css/articles.css">
 </head>
 <body>
@@ -20,8 +21,8 @@
     <div class="guide-user-signal">不认命，不低头，不将就</div>
     <!-- 页面跳转区 -->
     <div class="guide-sorts">
-      <div class="guide-blog"><a>BLOG</a></div>
-      <div class="guide-photos"><a>PHOTOS</a></div>
+      <div class="guide-blog"><a href="./index.html">BLOG</a></div>
+      <div class="guide-photos"><a href="./photos.html">PHOTOS</a></div>
     </div>
   </div>
 
@@ -62,55 +63,132 @@
 </div>
 
 <!-- 右侧文章展示区 -->
-<div class="show-note">
+<!-- html5文章分类区 -->
+<div class="show-h5-note" style="display: none;">
+  <!-- 没有文章时的处理 -->
+  <div class="article-none" style="display: none;">暂时没有文章更新，敬请期待~</div>
   <!-- 文章分块 -->
-  <div>
-    <div>
+  <div class="article-container">
+    <div class="summary-container">
+      <div class="show-summary">第一篇文章的摘要。。。。。。。。。。</div>
+    </div>
+    <div class="title-container">
+      <p class="show-title">Article 1</p>
+      <a href="./article.html" data-index='0'>More</a>
+    </div>
+  </div>
+</div>
+<!-- css文章分类区 -->
+<div class="show-css-note" style="display: none;">
+  <!-- 没有文章时的处理 -->
+  <div class="article-none">暂时没有文章更新，敬请期待~</div>
+  <!-- 文章分块 -->
+  <div class="article-container" style="display: none;">
+    <div class="summary-container">
+      <div class="show-summary">第一篇文章的摘要。。。。。。。。。。</div>
+    </div>
+    <div class="title-container">
+      <p class="show-title">Article 1</p>
+      <a href="./article.html" data-index='0'>More</a>
+    </div>
+  </div>
+</div>
+<!-- js文章分类区 -->
+<div class="show-js-note">
+  <!-- 没有文章时的处理 -->
+  <div class="article-none" style="display: none;">暂时没有文章更新，敬请期待~</div>
+  <!--  文章分块 -->
+  <div class="article-container">
+    <div class="summary-container">
       <div class="show-summary"></div>
     </div>
-    <div>
+    <div class="title-container">
       <p class="show-title"></p>
       <a href="./article.html" data-index='0'>More</a>
     </div>
   </div>
-  <div>
-    <div>
+  <div class="article-container">
+    <div class="summary-container">
       <div class="show-summary"></div>
     </div>
-    <div>
+    <div class="title-container">
       <p class="show-title"></p>
       <a href="./article.html" data-index='1'>More</a>
     </div>
   </div>
-  <div>
-    <div>
+  <div class="article-container">
+    <div class="summary-container">
       <div class="show-summary"></div>
     </div>
-    <div>
+    <div class="title-container">
       <p class="show-title"></p>
       <a href="./article.html" data-index='2'>More</a>
     </div>
   </div>
-  <div>
-    <div>
+  <div class="article-container">
+    <div class="summary-container">
       <div class="show-summary">第四篇文章的摘要。。。。。。。。。。</div>
     </div>
-    <div>
+    <div class="title-container">
       <p class="show-title">Article 4</p>
       <a href="./article.html" data-index='3'>More</a>
     </div>
   </div>
-  <div>
-    <div>
+  <div class="article-container">
+    <div class="summary-container">
       <div class="show-summary">第五篇文章的摘要。。。。。。。。。。</div>
     </div>
-    <div>
+    <div class="title-container">
       <p class="show-title">Article 5</p>
       <a href="./article.html" data-index='4'>More</a>
     </div>
   </div>
 </div>
-
+<!-- 算法经验总结文章分类区 -->
+<div class="show-alog-expert" style="display: none;">
+  <!-- 没有文章时的处理 -->
+  <div class="article-none">暂时没有文章更新，敬请期待~</div>
+  <!-- 文章分块 -->
+  <div class="article-container" style="display: none;">
+    <div class="summary-container">
+      <div class="show-summary">第一篇文章的摘要。。。。。。。。。。</div>
+    </div>
+    <div class="title-container">
+      <p class="show-title">Article 1</p>
+      <a href="./article.html" data-index='0'>More</a>
+    </div>
+  </div>
+</div>
+<!-- 算法热门网站文章分类区 -->
+<div class="show-alog-website" style="display: none;">
+  <!-- 没有文章时的处理 -->
+  <div class="article-none">暂时没有文章更新，敬请期待~</div>
+  <!-- 文章分块 -->
+  <div class="article-container" style="display: none;">
+    <div class="summary-container">
+      <div class="show-summary">第一篇文章的摘要。。。。。。。。。。</div>
+    </div>
+    <div class="title-container">
+      <p class="show-title">Article 1</p>
+      <a href="./article.html" data-index='0'>More</a>
+    </div>
+  </div>
+</div>
+<!-- 随笔心得文章分类区 -->
+<div class="show-note-feeling" style="display: none;">
+  <!-- 没有文章时的处理 -->
+  <div class="article-none">暂时没有文章更新，敬请期待~</div>
+  <!-- 文章分块 -->
+  <div class="article-container" style="display: none;">
+    <div class="summary-container">
+      <div class="show-summary">第一篇文章的摘要。。。。。。。。。。</div>
+    </div>
+    <div class="title-container">
+      <p class="show-title">Article 1</p>
+      <a href="./article.html" data-index='0'>More</a>
+    </div>
+  </div>
+</div>
 <script src="./static/js/tool.js"></script>
 <script src="./static/js/articledata.js"></script>
 <script src="./static/js/articles.js"></script>

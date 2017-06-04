@@ -2,19 +2,21 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>Markdown</title>
+    <title>Jiajia's Blog</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="./static/pic/luckyplant.ico">
+    <link rel="stylesheet" href="./static/css/markdownmd.css">
     <link rel="stylesheet" href="./markdown/css/editormd.css">
 </head>
 
 <body>
-<input type="button" value="click" class="button">
 <div id="test-editormd">
   <textarea style="display:none;">## Write down What you want to remember!</textarea>
 </div>
 <div class="view-area"></div>
+<div class="button">BACK</div>
+<script src="./static/js/tool.js"></script>
 <script src="./markdown/examples/js/jquery.min.js"></script>
 <script src="./markdown/editormd.js"></script>
-<script src="./static/js/marktohtml.js"></script>
 <script type="text/javascript">
   var testEditor;
   $(function() {
@@ -24,6 +26,10 @@
       path: "../markdown/lib/"
     });
   });
+  var button = $('.button')[0]
+  button.addEventListener('click', function () {
+    window.location.replace('index.html')
+  })
 </script>
 </body>
 </html>

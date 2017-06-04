@@ -127,12 +127,8 @@ form > div:nth-child(1) {
 }
 /*重置按钮和提交按钮*/
 .button {
-  margin: 0 auto;
+  margin: 20px auto 0;
   width: 68%;
-  margin-top: 20px;
-}
-.submit {
-  width: 100%;
   height: 50px;
   line-height: 50px;
   border: 0;
@@ -140,10 +136,12 @@ form > div:nth-child(1) {
   background: #2ECC71;
   font-size: 18px;
   color: #fff;
+  text-align: center;
+  cursor: pointer;
   transition: all .2s ease-out;
 }
-.submit:hover {
-  background: #28B463;
+.button:hover {
+  background: #28B468;
 }
 /*没有权限，返回主页*/
 .back-button {

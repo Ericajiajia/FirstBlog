@@ -10,6 +10,7 @@
  * @updateTime  2015-06-09
  */
 var i = 0
+var saveArr = []
 ;(function(factory) {
     "use strict";
     

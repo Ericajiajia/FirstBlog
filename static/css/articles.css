@@ -81,6 +81,7 @@ html, body {
   margin: 5px auto 0;
   padding: 0;
   color: #30393f;
+  text-decoration: none;
   user-select: none;
 }
 .guide-sorts div:nth-child(1) {
@@ -178,7 +179,7 @@ html, body {
   margin-top: -14px;
 }
 .category-title li:hover {
-  background: rgba(200, 197, 197, 0.4);
+  background: rgba(200, 197, 197, .4);
 }
 .category-title li > p {
   font-size: 14px;
@@ -192,7 +193,12 @@ html, body {
 
 
 /*文章展示（分块）*/
-.show-note {
+.show-js-note,
+.show-h5-note,
+.show-css-note,
+.show-alog-expert,
+.show-alog-website,
+.show-note-feeling {
   width: calc(100% - 380px);
   float: right;
   margin-right: 0;
@@ -215,27 +221,27 @@ html, body {
     opacity: 1;
   }
 }
-@keyframes shownoteOut {
-  from {
-    transform-origin: top;
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  to {
-    transform-origin: top;
-    transform: scaleY(0);
-    opacity: 0;
-  }
-}
-.show-note > div {
+.article-none,
+.article-container {
   margin: 0 30px 20px 0;
-  width: 290px;
-  height: 290px;
   border: 1px solid #fafafa;
   border-radius: 2px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12), 0 3px 1px -2px rgba(0, 0, 0, .2);
 }
-.show-note > div > div:nth-child(1) {
+.article-none {
+  width: 80%;
+  height: 180px;
+  line-height: 180px;
+  color: #43515c;
+  font-size: 26px;
+  font-weight: bolder;
+  text-align: center;
+}
+.article-container {
+  width: 290px;
+  height: 290px;
+}
+.summary-container {
   width: 100%;
   height: 220px;
   background: #808080;
@@ -243,32 +249,36 @@ html, body {
   transition: all .2s ease-out;
 }
 .show-summary {
-  background: rgba(256, 256, 256, 0.2);
+  position: relative;
   width: 100%;
   height: 100%;
+  background: rgba(256, 256, 256, 0.2);
   text-indent: 2em;
   font-size: 20px;
-  position: relative;
   top: 250px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  word-wrap: break-word; 
+  word-break: normal; 
   transition: all .4s ease-out;
 }
-.show-note > div > div:hover .show-summary {
+.summary-container:hover .show-summary {
   top: 0;
 }
-.show-note > div > div:nth-child(1):hover {
+.summary-container:hover {
   background: #d3d3d3;
 }
-.show-note > div > div:nth-child(2) {
+.title-container {
   width: 100%;
   height: calc(100% - 220px);
   margin-top: -15px;
 }
-.show-note > div > div p {
+.summary-container p, .title-container p {
   font-size: 26px;
   font-weight: bolder;
   text-align: center;
 }
-.show-note > div > div a {
+.summary-container a, .title-container a {
   margin: -20px 10px 0 0;
   font-size: 10px;
   display: inline-block;

@@ -4,8 +4,8 @@ var order = $(".order")[0]
 var orderlis = $(".order li")
 var num = 0
 var interval
-var submit = $(".submit")[0]
-var user-name, password
+var button = $(".button")[0]
+var userName, password
 
 // 让当前图片及时显现
 var play = function (num) {
@@ -29,11 +29,11 @@ var autoplay = function () {
 autoplay()
 
 // 给提交按钮绑定事件
-submit.addEventListener("click", function () {
-  user-name = $(".input-box")[0].value
+button.addEventListener("click", function () {
+  userName = $(".input-box")[0].value
   password = $(".input-box")[1].value
-  if (user-name === "Ericajiajia" && password === "sherhooo"){
-    window.open("private.html", '_blank')
+  if (userName.toLowerCase() === "ericajiajia" && password.toLowerCase() === "sherhooo"){
+    window.location.href = 'markdownmd.html'
   } else {
     alert("你没有权限访问私人页面，请联系Jiajia！")
   }

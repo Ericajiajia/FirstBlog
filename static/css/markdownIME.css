@@ -11,7 +11,7 @@ body {
 .top-bar {
   width: 100%;
   height: 50px;
-  margin: 0;
+  margin: 10px auto;
   padding: 0;
   border: 0;
 }
@@ -23,12 +23,15 @@ body {
   color: #fff;
 }
 #editor {
-  color: #000;
-  box-shadow: 0 2px 5px #000;
-  background: #eee;
-  padding: 10px 20px;
-  margin: 0 auto;
+  width: 100%;
+  height: 1000px;
   max-width: 800px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  border: 1px solid #000;
+  background: #eeeeee;
+  color: #000000;
+  box-shadow: 0 2px 5px #000000;
 }
 blockquote {
   border-left: 10px solid #ccc;
@@ -51,9 +54,22 @@ table, td, th {
   height: 1em;
   vertical-align: middle;
 }
-div {
-  margin-top: 50px;
-  width: 100%;
-  height: 1000px;
-  border: 1px solid #000;
+.back-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 2px 0px 12px 1px rgba(240, 240, 240, .3);
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  background: rgba(250, 250, 250, .4);
+  color: rgba(0, 0, 0, .7);
+  cursor: default;
+  transition: background .2s ease;
+}
+.back-button:hover {
+  background: rgba(250, 250, 250, .8);
 }

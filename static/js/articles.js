@@ -1,8 +1,10 @@
+var guideUserHead = $('.guide-user-head')[0]
 var parent = $('.guide-summary')[0]
 var articleUl = $('.category-title ul')
 var articleLi = $('.category-title ul li')
-var showSummary = $('.show-summary')
-var showTitle = $('.show-title')
+var showSummary = $('.show-js-note .show-summary')
+var showTitle = $('.show-js-note .show-title')
+var containerArr = [$('.show-h5-note')[0], $('.show-css-note')[0], $('.show-js-note')[0], $('.show-alog-expert')[0], $('.show-alog-website')[0], $('.show-note-feeling')[0]]
 articleLi[2].style.background = "rgba(200, 197, 197, 1)"
 
 // 给文章块赋值
@@ -33,7 +35,6 @@ parent.addEventListener('click', function (e) {
     } else {
     cateName = e.target.parentNode.parentNode.dataset.name
     }
-    console.log(cateName)
     switch (cateName) {
       case 'fe':
         turnArray (0, labeling, uling)
@@ -53,13 +54,22 @@ parent.addEventListener('click', function (e) {
 for (var i = 0; i < articleUl.length; i++){
   articleUl[i].addEventListener("click", function (e) {
     var childName
+    let index = 0
 
     if (e.target.nodeName === "P") {
       childName = e.target.parentNode
-      for (var j = 0; j < articleLi.length; j++) {
-        articleLi[j].style.background = ""
+        console.log(e.target.textContent)
+      for (var j = 0; j < articleLi.length; j ++) {
+        let _j = j
+        articleLi[_j].style.background = ''
+        containerArr[_j].style.display = 'none'
+        if (e.target.textContent === articleLi[_j].getElementsByTagName('p')[0].innerHTML) {
+          index = _j
+          console.log(index)
+        }
       }
       if (childName.style.background === ""){
+        containerArr[index].style.display = 'flex'
         childName.style.background = "rgba(200, 197, 197, 1)"
       } else {
         childName.style.background = ""
@@ -67,4 +77,6 @@ for (var i = 0; i < articleUl.length; i++){
     }
   })
 }
-
+guideUserHead.addEventListener('click', function () {
+  window.location.href = 'login.html'
+})

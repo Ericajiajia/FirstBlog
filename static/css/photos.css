@@ -1,0 +1,260 @@
+html, body {
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+.fixed-bar {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  min-width: 1100px;
+  height: 60px;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  display: flex;
+  border: 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+.fixed-bar > div {
+  height: 100%;
+}
+.guide-user {
+  width: 220px;
+  margin-left: 10%;
+  margin-right: 125px;
+}
+.guide-user-img {
+  width: 50px;
+  height: 50px;
+  margin-top: 4px;
+  border-radius: 50%;
+  background: url(../pic/head_panda.jpg);
+  background-size: 105% 140%;
+  cursor: pointer;
+}
+.guide-user::after {
+  content: '不认命，不低头，不将就';
+  float: right;
+  margin-top: -20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b6b6b;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .24);
+  cursor: default;
+}
+.guide-blog, .guide-articles {
+  width: 13%;
+  line-height: 10px;
+  padding-top: 10px;
+  box-sizing: border-box;
+  color: #000;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bolder;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+.guide-blog:hover, .guide-articles:hover {
+  background: #f5f5f5;
+}
+.title {
+    width: auto;
+    margin: 80px auto;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.container {
+    width: 98%;
+    height: auto;    
+    margin: -80px auto 20px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.picture-box {
+    width: 350px;
+    height: 230px;
+    margin: 30px 3% 0 3%;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: box-shadow .2s ease-out;
+}
+.picture-box:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+.img-cursor {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.cover-back {
+    width: 100%;
+    min-width: 1100px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.cover-page {
+    position: fixed;
+    width: 60%;
+    min-width: 820px;
+    height: 84%;
+    min-height: 536px;
+    background: #191919;
+    margin: 4% 20%;
+    border-radius: 5px;
+    animation-name: fadeIn;
+    animation-duration: .4s;
+    display: none;
+}
+@keyframes fadeIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.close {
+    width: 100%;
+    height: 10%;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-size: 34px;
+    color: #ffffff;
+    font-weight: 900;
+    box-sizing: border-box;
+    cursor: default;    
+}
+.close p {
+    float: right;
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+.showing {
+    width: 60%;
+    height: 50%;
+    margin: 3% auto;
+}
+.showing img {
+    width: 100%;
+    height: 100%;
+}
+.showing-number {
+    position: absolute;
+    top: 13%;
+    left: 21%;
+    font-size: 10px;
+    color: #ffffff;
+}
+.showing-left-arrow, .showing-right-arrow {
+    position: absolute;
+    width: 30px;
+    height: 44px;
+    padding: 0;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 900;
+    top: 38%;
+    text-align: center;
+    cursor: pointer;
+}
+.showing-left-arrow:hover, .showing-right-arrow:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+.showing-left-arrow {
+    left: 20%;
+}
+.showing-right-arrow {
+    right: 20%;
+}
+.showing-word {
+    margin: -2% auto;
+    font-weight: bolder;
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    cursor: default;
+}
+.guide-bar {
+    width: 700px;
+    height: 100px;
+    margin: 3% auto;
+    padding: 0;
+}
+.guide-pics-container {
+    width: 604px;
+    height: 100px;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.guide-pics {
+    position: absolute;
+    top: -16px;
+    left: -40px;
+    width: calc(151px * 11);
+    height: 100%;
+    transition: left .5s ease-out;
+}
+.guide-left-arrow, .guide-right-arrow {
+    position: relative;
+    width: 48px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+    font-size: 46px;
+    text-align: center;
+    font-weight: 900;
+    cursor: default;
+    color: rgba(256, 256, 256, .3);
+    transition: color .3s ease-out;
+}
+.guide-left-arrow {
+    float: left;
+    top: calc(50% - 25px);
+}
+.guide-right-arrow {
+    float: right;
+    top: calc(-50% - 25px);
+}
+.guide-left-arrow:hover, .guide-right-arrow:hover {
+    color: rgb(256, 256, 256);
+}
+.disabled {
+    pointer-events: none;
+    cursor: pointer;
+}
+.guide-picture {
+    width: 151px;
+    height: 100%;
+    float: left;
+    list-style-type: none;
+    opacity: .4;
+    transition: opacity .3s ease-out;
+}
+.guide-picture:hover {
+    opacity: .9;
+}
+.guide-picture img {
+    width: 100%;
+    height: 100%;
+}
+.guiding {
+    opacity: .9;
+}
